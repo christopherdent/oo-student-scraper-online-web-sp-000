@@ -15,6 +15,7 @@ class Scraper
         name = student.css(".student-name").text
         location = student.css(".student-location").text
         profile_url = "#{student.attr("href")}"
+        binding.pry 
         students << {name: name, location: location, profile_url: profile_url}
       end
     end
